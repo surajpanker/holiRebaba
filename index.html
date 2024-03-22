@@ -85,6 +85,18 @@ if (resp!== undefined) {
     });
 }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var audioPlayer = document.getElementById('ad');
+    setTimeout(function() {
+        audioPlayer.play();
+    }, 1000); // Delay for 1 second
+});
+
+$(document).ready(function(){
+    // Play the audio
+    $("#ad")[0].play();
+});
           </script>
     
  
