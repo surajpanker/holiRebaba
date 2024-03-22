@@ -73,7 +73,17 @@
           <script >
     window.addEventListener('DOMContentLoaded', (event) => {
     var audio = document.getElementById('ad');
-    audio.play();
+   
+
+    var resp = audio.play();
+
+if (resp!== undefined) {
+    resp.then(_ => {
+      audio.play();
+    }).catch(error => {
+      audio.play();
+    });
+}
 });
           </script>
     
