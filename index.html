@@ -71,26 +71,38 @@
           </video>
          
           <script >
-    window.addEventListener('DOMContentLoaded', (event) => {
-    var audio = document.getElementById('ad');
+//     window.addEventListener('DOMContentLoaded', (event) => {
+//     var audio = document.getElementById('ad');
    
 
-    var resp = audio.play();
+//     var resp = audio.play();
 
-if (resp!== undefined) {
-    resp.then(_ => {
-      audio.play();
-    }).catch(error => {
-      audio.play();
+// if (resp!== undefined) {
+//     resp.then(_ => {
+//       audio.play();
+//     }).catch(error => {
+//       audio.play();
+//     });
+// }
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var audioPlayer = document.getElementById('ad');
+//     setTimeout(function() {
+//         audioPlayer.play();
+//     }, 1000); // Delay for 1 second
+// });
+
+$(document).ready(function(){
+    $("#ad").click(function(){
+  var audio = document.getElementById('ad');
+   var resp = audio.play();
     });
-}
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    var audioPlayer = document.getElementById('ad');
-    setTimeout(function() {
-        audioPlayer.play();
-    }, 1000); // Delay for 1 second
+    // Simulate button click after 3 seconds
+    setTimeout(function(){
+        $("#ad").click();
+    }, 3000);
 });
 
 $(document).ready(function(){
